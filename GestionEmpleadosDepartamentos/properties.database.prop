@@ -1,0 +1,12 @@
+# Conexión a SQLite
+db=sqlite
+driver = org.sqlite.JDBC
+dsn = jdbc:sqlite:ManejoEmpleadoDepartamento.sqlite
+
+
+# Conexión a MariaDB
+#db=mariadb
+#driver = org.mariadb.jdbc.Driver
+#dsn = jdbc:mariadb://localhost:7706:3306/acceso
+#user = root
+#pass = toor
