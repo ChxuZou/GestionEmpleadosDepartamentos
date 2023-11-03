@@ -244,9 +244,9 @@ public class ManejoBasesDeDatos {
 			PreparedStatement sentenciaPreparada = conn.prepareStatement(sentencia);
 			sentenciaPreparada.setInt(1, idDepartamento);
 
-			departamentoBorrado = updateDeEliminarDepartamento(idDepartamento)
-					&& sentenciaPreparada.executeUpdate() > 0;
-
+			if(updateDeEliminarDepartamento(idDepartamento)){
+			departamentoBorrado =  sentenciaPreparada.executeUpdate() > 0;
+			}
 			if (departamentoBorrado) {
 				conn.commit();
 			} else {
